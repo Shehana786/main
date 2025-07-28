@@ -1,0 +1,49 @@
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist/
+build/
+coverage/
+logs/
+*.log
+
+# === React ===
+# If using Create React App (CRA)
+/build
+/.pnp
+.pnp.js
+
+# Optional Redux DevTools
+redux-devtools-extension/
+
+# === OS/System files ===
+.DS_Store
+Thumbs.db
+
+# === IDEs ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# === Socket.IO ===
+debug.log
+
+# === Testing ===
+/coverage
+/jest-test-results.json
+
+# === Uploads or other temp folders ===
+/uploads
+/public/uploads
+/tmp
+/temp

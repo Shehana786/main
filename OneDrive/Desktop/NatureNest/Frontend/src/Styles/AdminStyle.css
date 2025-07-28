@@ -1,0 +1,237 @@
+/* Container for the whole admin dashboard */
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Navigation buttons */
+.admin-dashboard nav {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.admin-dashboard nav button {
+  padding: 12px 22px;
+  border: none;
+  background-color: #2e7d32; /* green */
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 6px rgba(46,125,50,0.4);
+}
+
+.admin-dashboard nav button:hover,
+.admin-dashboard nav button:focus {
+  background-color: #1b4d20;
+  box-shadow: 0 4px 10px rgba(27,77,32,0.6);
+}
+
+/* Active tab button styling */
+.admin-dashboard nav button.active {
+  background-color: #1b4d20;
+  box-shadow: 0 0 12px #1b4d20;
+}
+
+/* Flex container for form and table side by side */
+.admin-dashboard .flex-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Form styling */
+.admin-dashboard form {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.admin-dashboard form:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.admin-dashboard form input[type="text"],
+.admin-dashboard form input[type="number"],
+.admin-dashboard form textarea,
+.admin-dashboard form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.admin-dashboard form input[type="text"]:focus,
+.admin-dashboard form input[type="number"]:focus,
+.admin-dashboard form textarea:focus,
+.admin-dashboard form select:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+.admin-dashboard form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.admin-dashboard form input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.admin-dashboard form input[type="file"] {
+  margin-bottom: 25px;
+}
+
+.admin-dashboard form button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #2e7d32;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-dashboard form button:hover {
+  background-color: #1b4d20;
+}
+
+/* Table container */
+.admin-dashboard .table-container {
+  flex: 1;
+  overflow-x: auto;
+  min-width: 600px;
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+/* Table styling */
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+.admin-dashboard table thead tr {
+  background-color: #2e7d32;
+  color: white;
+  user-select: none;
+}
+
+.admin-dashboard table th,
+.admin-dashboard table td {
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.admin-dashboard table tbody tr:hover {
+  background-color: #f1f8f1;
+  cursor: pointer;
+}
+
+/* Image inside table */
+.admin-dashboard table img {
+  border-radius: 6px;
+  max-width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Action buttons */
+.admin-dashboard table button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.admin-dashboard table button:hover {
+  opacity: 0.85;
+}
+
+.admin-dashboard table button:first-of-type {
+  background-color: #0288d1;
+  color: white;
+}
+
+.admin-dashboard table button:last-of-type {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Transparent style for low stock rows */
+.admin-dashboard table tbody tr.low-stock {
+  opacity: 0.6;
+  background-color: #fff8f0;
+  color: #b34700;
+  font-weight: 600;
+  border-left: 5px solid #f57c00;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.admin-dashboard table tbody tr.low-stock:hover {
+  background-color: #fff3e0;
+  opacity: 0.75;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .admin-dashboard .flex-container {
+    flex-direction: column;
+  }
+
+  .admin-dashboard .table-container,
+  .admin-dashboard form {
+    max-width: 100%;
+  }
+}
+.low-stock {
+  background-color: #fff3e0; /* light orange background */
+  color: #b34700;             /* dark orange text */
+  font-weight: 600;
+  opacity: 0.7;               /* slight transparency */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.low-stock:hover {
+  background-color: #ffe0b2;
+  opacity: 1;
+}
+
